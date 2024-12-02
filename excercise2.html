@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Info.</title>
+
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(241, 231, 217);
+      max-width: 400vh;
+    }
+
+    .contact-form {
+      background-color: white;
+      padding: 20px;
+      ;
+      border-radius: 10px;
+      width: 600px;
+    }
+
+    .contact-form h2 {
+      text-align: left;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .contact-form input[type="text"] .contact-form input[type="email"] .contact-form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: solid #ccc;
+    }
+
+    .contact-form input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .contact-form .radio-group {
+      margin-bottom: 15px;
+    }
+
+    .contact-form .checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .contact-form .submit {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: rgb(23, 122, 23);
+      color: white;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .contact-form .submit:hover {
+      background-color: #07310d;
+    }
+
+    .contact-form .query {
+      width: 45%;
+      height: 15%;
+      background-color: white;
+      border-radius: 5px;
+      color: rgb(70, 70, 70);
+      padding: 10px;
+    }
+
+    .contact-form .query:hover {
+      background-color: gray;
+      color: white;
+    }
+
+    .contact-form .information {
+      width: 45%;
+      height: 15%;
+      background-color: white;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    .contact-form .name {
+      font-size: 13px;
+      color: rgb(70, 70, 70);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form>
+      <label class="name" for="First-name">First Name</label>
+      <input class="information" type="text" id="First-name" name="First-name" required>
+
+      <label class="name" for="Last-name">Last Name</label>
+      <input class="information" type="text" id="Last-name" name="Last-name" required>
+
+      <label class="name" for="Last-name">Email Address</label>
+      <input class="information" type="email" id="email" name="email" required>
+
+      <div class="radio-group">
+        <label class="name">Query Type</label>
+
+        <input type="radio" id="general-enquiry" name="query-type" value="general-enquiry" required>
+        <button class="query"><label>General Enquiry</label></button>
+
+        <input type="radio" id="support-request" name="query-type" value="support-request" required>
+        <button class="query"><label for="support-request">Support Request</label></button>
+      </div>
+
+      <label class="message" for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <div class="checkbox">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label class="name" for="consent">I consent to being contacted by the team</label>
+      </div>
+
+      <button class="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
